@@ -21,7 +21,7 @@ def car_detection(frame):
 
 # function for loading and rendering the given video
 def main():
-    video_number = input("What video do you want to use(1-3)? ")
+    video_number = input("What video do you want to use(1-2)")
     video_number = int(video_number)
     video = cv2.VideoCapture('../data/cars' + str(video_number) + '.mp4') 
     if video_number > 2:
@@ -42,6 +42,7 @@ def main():
         # if user presses 'q' the program ends
         if exitKey == ord('q'):
             break
+
     video.release()
     cv2.destroyAllWindows()
 
